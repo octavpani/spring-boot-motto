@@ -4,6 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### 設定ファイルの削除 ###
+/src/main/resources/application.properties
+
 ### STS ###
 .apt_generated
 .classpath
