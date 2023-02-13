@@ -1,5 +1,9 @@
 package com.paniPieris.project.entity;
 
+
+
+import java.util.Date;
+
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -11,11 +15,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name="motto")
-@Data
+@Getter
+@Setter
 public class Motto {
 	
 	@Id
@@ -57,13 +63,13 @@ public class Motto {
 	@Column(name = "phrase_10")
 	private String phrase_10;
 	
-	@Column(name = "date_created")
 	@CreationTimestamp
-	private Data date_created;
+	@Column(name = "date_created")
+	private Date date_created;
 	
 	@UpdateTimestamp
 	@Column(name = "last_updated")
-	private Data last_updated;
+	private Date last_updated;
 	
 
 }
