@@ -1,3 +1,19 @@
-<p *ngFor="let tempMotto of mottoes">
-    {{ tempMotto.phrase_1 }}
-</p>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>id</th>
+            <th>phrase1</th>
+            <th>phrase2</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- table row -->
+        <tr *ngFor="let tempMotto of mottoes">
+            <!-- table data -->
+            <td>{{ tempMotto.phrase_1 }}</td>
+            <td>{{ tempMotto.phrase_2 }}</td>
+            <td>{{ tempMotto.phrase_3 }}</td>
+        </tr>
+    </tbody>
+</table>

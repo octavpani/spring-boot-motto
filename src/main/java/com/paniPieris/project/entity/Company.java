@@ -31,6 +31,9 @@ public class Company {
 	@Column(name = "company_name")
 	private String company_name;
 	
+    @Column(name = "image_url")
+    private String image_url;
+	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "company")
 	private Motto motoo;
 	

@@ -1,0 +1,20 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th></th>
+            <th>companyName</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- table row -->
+        <tr *ngFor="let tempComapny of companies">
+            <!-- table data -->
+            <td class="align-middle">
+                <!-- TODO add this attribute to cssfile -->
+                <img src="{{ tempComapny.image_url }}" height="50" width="50"/>
+            </td>
+            <td class="align-middle">{{ tempComapny.company_name }}</td>
+        </tr>
+    </tbody>
+</table>

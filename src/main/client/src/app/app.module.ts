@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { MottoListComponent } from './components/motto-list/motto-list.component';
 import { HttpClientModule } from '@angular/common/http'
 import { MottoService } from './services/motto.service';
+import { CompanyListComponent } from './components/company-list/company-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MottoListComponent
+    MottoListComponent,
+    CompanyListComponent
   ],
   imports: [
     BrowserModule,
