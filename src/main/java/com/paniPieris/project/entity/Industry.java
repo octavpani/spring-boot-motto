@@ -23,10 +23,10 @@ public class Industry {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "industry_id")
-	private Long industry_id;
+	private Long id;
 	
 	@Column(name = "industry_name")
-	private String industry_name;
+	private String industryName;
 	
 	// テーブルには存在しない。
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "industry")

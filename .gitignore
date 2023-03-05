@@ -6,6 +6,7 @@ target/
 
 ### 設定ファイルの削除 ###
 /src/main/resources/application.properties
+/src/main/client/angular.json
 
 ### STS ###
 .apt_generated

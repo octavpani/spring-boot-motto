@@ -1,0 +1,21 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- loop over the collection of companies -->
+                <div *ngFor="let tempComapny of companies" class="col-md-4">
+                    <div class="company-box">
+                        <img src="{{ tempComapny.imageUrl }}" class="img-responsive">
+                        <h1>{{ tempComapny.companyName }}</h1>
+                    </div>
+                </div>
+
+                <!-- if companies empty then display a message -->
+                <div *ngIf="companies?.length === 0" class="alert alert-warning col-md-12">
+                    該当する会社が見つかりませんでした。
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

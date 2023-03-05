@@ -22,17 +22,17 @@ public class Company {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "company_id")
-	private Long company_id;
+	private Long id;
 	
 	@ManyToOne
 	@JoinColumn(name = "industry_id", nullable = false)
 	private Industry industry;
 	
 	@Column(name = "company_name")
-	private String company_name;
+	private String companyName;
 	
     @Column(name = "image_url")
-    private String image_url;
+    private String imageUrl;
 	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "company")
 	private Motto motoo;
