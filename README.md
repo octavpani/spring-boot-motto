@@ -27,17 +27,34 @@ Angularプロジェクトのビルド先を指定する事で、
   
 手軽な練習用として、アプリを作成する事で、業務の振り返りや、Angularの理解を深める助けにしたいと思っています。  
   
-##  今後
-今後の課題としては、  
-1.ページングの実装  
-2.ロールを実装し、ログイン制御を設ける。  
-3.Spring Securityなどでセキュリティ対策を行う。  
-4.AWSあるいは、GCなどへデプロイを行う、などがあります。  
-  
-以前勤怠アプリを作成した際は、1~4までを行いました。
-とりあえず、今回はアプリの基本的な箇所までを作成しました。
-
 *HEROKUの無料プランは終了してしまった。。かなしい。
+  
+##  プロジェクトの骨組み部分の作成  
+* Springのプロジェクトを作成する。  
+Spring Initializrを使用して、Springプロジェクトを作成  
+下記の依存関係を追加する事。  
+Spring Boot DevTools  
+Lombok  
+Spring Data JPA  
+Spring Web  
+Rest Repository  
+MySQL Driver  
+  
+* Angularのプロジェクトを作成する。  
+src/main/にて、  
+ng new clientを実行。  
+→これにより、開発用のAngularプロジェクトが作成される。  
+
+* Angularをビルドする  
+angular.jsonの下記値を変更する。  
+projects.client.architect.build.options.outputPathを、dist/client → ../resources/publicにする。  
+ng build  
+→　Angularプロジェクトがビルドされる。  
+`http://localhost:8080`へアクセスすると、Angularのデフォルトページへ遷移する事が確認できる。
+
+
+
+
 
 ##  Angularを単体で動かす場合の準備について
 今回のプロジェクトは、Springは、ビルドされたAngularプロジェクトを参照します。
@@ -73,3 +90,13 @@ AngularのServiceクラスで、baseUrlにバックエンドのポートを指�
 SpringのRepositoryClassに@CrossOriginのアノテーションを付ける事。  
 これをしないと、CORSでエラーが吐かれて、バックエンドとフロントエンドがうまく連携されない。  
 今回のプロジェクトでは、すでに@CrossOriginを付与している。
+  
+##  今後
+今後の課題としては、  
+1.ページングの実装  
+2.ロールを実装し、ログイン制御を設ける。  
+3.Spring Securityなどでセキュリティ対策を行う。  
+4.AWSあるいは、GCなどへデプロイを行う、などがあります。  
+  
+以前勤怠アプリを作成した際は、1~4までを行いました。
+とりあえず、今回はアプリの基本的な箇所までを作成しました。
