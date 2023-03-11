@@ -3,10 +3,14 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- loop over the collection of companies -->
-                <div *ngFor="let tempComapny of companies" class="col-md-4">
+                <div *ngFor="let tempComapny of companies" class="col-md-3">
                     <div class="company-box">
-                        <img src="{{ tempComapny.imageUrl }}" class="img-responsive">
-                        <h1>{{ tempComapny.companyName }}</h1>
+                        <a routerLink="/companies/{{ tempComapny.id }}">
+                            <img src="{{ tempComapny.imageUrl }}" class="img-responsive">
+                        </a>
+                        <a routerLink="/companies/{{ tempComapny.id }}">
+                            <h1>{{ tempComapny.companyName }}</h1>
+                        </a>
                     </div>
                 </div>
 

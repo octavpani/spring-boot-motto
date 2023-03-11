@@ -43,6 +43,13 @@ export class CompanyService {
       map(response => response._embedded.companies)
     );
   }
+
+  getCompany(theCompanyId: number): Observable<Company> {
+
+    const companyUrl = `${this.baseUrl}/${theCompanyId}`;
+
+    return this.httpClient.get<Company>(companyUrl);
+  }
 }
 
 interface GetResponseCompany {
