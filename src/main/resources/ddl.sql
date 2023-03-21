@@ -1,3 +1,6 @@
+-- Create Schema
+CREATE SCHEMA `company-motto`;
+
 -- -----------------------------------------------------
 -- Table `company-motto`.`industry`
 -- -----------------------------------------------------
