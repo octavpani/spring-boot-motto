@@ -5,8 +5,18 @@
                 <img src="{{ company.imageUrl }}" class="detail-img">
             </div>
             <div class="col-12"> 
-                <h3>{{ company.companyName }}</h3>
+                <h1>{{ company.companyName }}</h1>
             </div>
+            <p>
+            <p class="h2">
+                <i class="fa-solid fa-pen-fancy fa-rotate-180"></i><span class="m-5">社訓</span><i class="fa-solid fa-pen-fancy"></i>
+            </p>
+            <p>
+            <ul class="list-group">
+                <li *ngFor="let temPhrase of phrases" class="col-12"> 
+                    <p class="phrase">{{ temPhrase }}</p>
+                </li>
+            </ul>
         </div>
         <a routerLink="/companies" class="mt-5">会社一覧</a>
     </div>

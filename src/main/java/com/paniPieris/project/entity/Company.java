@@ -35,7 +35,7 @@ public class Company {
     private String imageUrl;
 	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "company")
-	private Motto motoo;
+	private Motto motto;
 	
 	
 

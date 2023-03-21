@@ -307,6 +307,10 @@ input.au-input.au-input-xl{
     transform:translate(-50%,-50%)
 }
 
+.phrase {
+    font-family: "MS PGothic";
+}
+
 /* 
  * ----------------------------
  * Left Menu Bar
